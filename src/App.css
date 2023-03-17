@@ -44,6 +44,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   will-change: transform;
+  margin-top: 20px;
 }
 .btn:disabled {
   pointer-events: none;
@@ -60,5 +61,5 @@
   transform: translateY(0);
 }
 .btn:not(:last-child){
-  margin-left: 215px;
+  margin-left: 700px;
 }

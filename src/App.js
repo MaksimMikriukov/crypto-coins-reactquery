@@ -3,7 +3,6 @@ import {useQuery} from "react-query";
 import axios from 'axios';
 import {useState} from "react";
 import Coins from "./components/Coins";
-import Container from "./components/Container";
 import Button from "./components/UI/Button";
 
 
@@ -18,7 +17,8 @@ function App() {
   const [page, setPage] = useState(0)
   const {data, isLoading, isError} = useQuery (["coins", page], () =>
   fetchCoins(page), {
-      keepPreviousData: true,
+    keepPreviousData: true,
+    refetchOnWindowFocus: false,
     }
   );
 
